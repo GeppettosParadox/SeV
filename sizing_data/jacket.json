@@ -1,0 +1,361 @@
+{
+    "product": {
+        "name": "Jacket",
+        "image": "/uploads/sizing_icons/jacket.jpg",
+        "variants": [
+            {
+                "name": "Men",
+                "dimension_types_desktop": [
+                    "Neck size",
+                    "Chest",
+                    "Waist",
+                    "Sleeve length"
+                ],
+                "dimension_types_mobile": [
+                    "Neck",
+                    "Chest",
+                    "Waist",
+                    "Sleeve"
+                ],
+                "sizes": [
+                    {
+                        "name": "small",
+                        "abbrev": "s",
+                        "height_weights": [
+                            "505_161",
+                            "506_161",
+                            "507_161"
+                        ],
+                        "dimensions": [
+                            [
+                                14,
+                                14.5
+                            ],
+                            [
+                                34,
+                                36
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                32,
+                                33
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "medium",
+                        "abbrev": "m",
+                        "height_weights": [
+                            "505_171",
+                            "506_171",
+                            "507_171"
+                        ],
+                        "dimensions": [
+                            [
+                                15,
+                                15.5
+                            ],
+                            [
+                                38,
+                                40
+                            ],
+                            [
+                                32,
+                                34
+                            ],
+                            [
+                                33,
+                                34
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "large",
+                        "abbrev": "l",
+                        "height_weights": [
+                            "505_181",
+                            "506_181",
+                            "507_181"
+                        ],
+                        "dimensions": [
+                            [
+                                16,
+                                16.5
+                            ],
+                            [
+                                42,
+                                44
+                            ],
+                            [
+                                36,
+                                38
+                            ],
+                            [
+                                34,
+                                35
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "extra large",
+                        "abbrev": "xl",
+                        "height_weights": [
+                            "505_191",
+                            "506_191",
+                            "507_191"
+                        ],
+                        "dimensions": [
+                            [
+                                17,
+                                17.5
+                            ],
+                            [
+                                46,
+                                48
+                            ],
+                            [
+                                40,
+                                42
+                            ],
+                            [
+                                35,
+                                36
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "2X large",
+                        "abbrev": "xxl",
+                        "height_weights": [
+                            "505_201",
+                            "506_201",
+                            "507_201"
+                        ],
+                        "dimensions": [
+                            [
+                                18,
+                                18.5
+                            ],
+                            [
+                                50,
+                                52
+                            ],
+                            [
+                                44,
+                                46
+                            ],
+                            [
+                                36,
+                                37
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "3X large",
+                        "abbrev": "xxxl",
+                        "height_weights": [
+                            "505_211",
+                            "506_211",
+                            "507_211"
+                        ],
+                        "dimensions": [
+                            [
+                                19,
+                                19.5
+                            ],
+                            [
+                                54,
+                                56
+                            ],
+                            [
+                                48,
+                                50
+                            ],
+                            [
+                                36,
+                                37
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Women",
+                "dimension_types_desktop": [
+                    "Neck size",
+                    "Chest",
+                    "Waist",
+                    "Bust",
+                    "Sleeve length"
+                ],
+                "dimension_types_mobile": [
+                    "Neck",
+                    "Chest",
+                    "Waist",
+                    "Bust",
+                    "Sleeve"
+                ],
+                "sizes": [
+                    {
+                        "name": "extra small",
+                        "abbrev": "xs",
+                        "height_weights": [
+                            "505_201",
+                            "506_201",
+                            "507_201"
+                        ],
+                        "dimensions": [
+                            [
+                                14,
+                                14.5
+                            ],
+                            [
+                                34,
+                                36
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                32,
+                                33
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "small",
+                        "abbrev": "s",
+                        "height_weights": [
+                            "505_191",
+                            "506_191",
+                            "507_191"
+                        ],
+                        "dimensions": [
+                            [
+                                14,
+                                14.5
+                            ],
+                            [
+                                34,
+                                36
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                32,
+                                33
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "medium",
+                        "abbrev": "m",
+                        "height_weights": [
+                            "505_181",
+                            "506_181",
+                            "507_181"
+                        ],
+                        "dimensions": [
+                            [
+                                15,
+                                15.5
+                            ],
+                            [
+                                38,
+                                40
+                            ],
+                            [
+                                32,
+                                34
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                33,
+                                34
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "large",
+                        "abbrev": "l",
+                        "height_weights": [
+                            "505_171",
+                            "506_171",
+                            "507_171"
+                        ],
+                        "dimensions": [
+                            [
+                                16,
+                                16.5
+                            ],
+                            [
+                                42,
+                                44
+                            ],
+                            [
+                                36,
+                                38
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                34,
+                                35
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "X large",
+                        "abbrev": "xl",
+                        "height_weights": [
+                            "505_161",
+                            "506_161",
+                            "507_161"
+                        ],
+                        "dimensions": [
+                            [
+                                17,
+                                17.5
+                            ],
+                            [
+                                46,
+                                48
+                            ],
+                            [
+                                40,
+                                42
+                            ],
+                            [
+                                28,
+                                30
+                            ],
+                            [
+                                35,
+                                36
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
