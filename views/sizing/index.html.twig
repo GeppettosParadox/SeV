@@ -1,0 +1,11 @@
+{% extends "../_layouts/layout.html.twig" %}
+
+{% set title = "Sizing Chart" %}
+
+{% block content %}
+    {% include '../sizing/_content.html.twig' %}
+{% endblock %}
+
+{% block pagescripts %}
+    {% include '../sizing/_vue-script.html.twig' %}
+{% endblock %}

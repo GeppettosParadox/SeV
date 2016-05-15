@@ -1,0 +1,36 @@
+<div class="container product-detail__bottom">
+    <div class="row" data-equalizer data-equalize-on="large">
+        <div class="small-12 large-7 columns" data-equalizer-watch>
+
+            <div class="product-detail__thumbs">
+                <div class="product-detail__thumbs__left">
+                    <div class="xray-img">
+                        <img src="/uploads/xray_grid/pink_vest.jpg" alt="">
+                        <img src="/uploads/xray_grid/pink_vest-xray.jpg" alt="">
+                    </div>
+                    <img src="/uploads/product_thumbs/pull-zipper.jpg" alt="">
+                </div>
+                <div class="product-detail__thumbs__right">
+                    <video class="video-js vjs-default-skin" width="375px" height="496px"
+                           controls preload="auto" poster='/uploads/product_thumbs/zipped-up-too-far.jpg'
+                           data-setup='{ "aspectRatio":"375:496"}'>
+                        <source src="/uploads/videos/vid.mp4" type='video/mp4'/>
+                    </video>
+                    <img src="/uploads/product_thumbs/back-shot.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="small-12 large-5 columns"  data-equalizer-watch>
+
+            <div id="stick-kit__buy">
+
+                {% include "../product-detail/_tab-box.html.twig" %}
+
+                <div class="scroll-back-btn">
+                    <button type="button" class="button buy" disabled>Buy Now <span class="icon-arrow"></span></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

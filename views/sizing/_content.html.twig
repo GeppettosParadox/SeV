@@ -1,0 +1,194 @@
+<div id="sizing-chart">
+    <div class="container" v-cloak>
+        <div class="row row--sizing-chart-header-row">
+            <h1 class="small-12 columns">SCOTTeVEST Fit Guide</h1>
+        </div>
+        <div class="row links-and-adjusters-row">
+            <div class="small-12 medium-6 columns sizing-chart-links">
+                <a href="#" class="active">Size Chart</a>
+                <a href="#">Apparel measurements</a>
+            </div>
+            <div class="small-12 medium-6 columns sizing-chart-adjusters">
+                <div>
+                    <span class="sizing-chart-units-text">Units:</span>
+                    <input type="radio"
+                           class="show-for-sr"
+                           id="adjuster-imperial"
+                           value="1.0"
+                           v-model="active_adjuster"
+                           checked="true"
+                    >
+                    <label for="adjuster-imperial" class="active">
+                        in <span class="show-for-sr">(inches)</span>
+                    </label>
+                    <input type="radio"
+                           class="show-for-sr"
+                           id="adjuster-metric"
+                           value="2.54"
+                           v-model="active_adjuster"
+                    >
+                    <label for="adjuster-metric">
+                        cm <span class="show-for-sr">(centimeters)</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row row--sizing-chart">
+            <div class="links-and-adjusters-row">
+            </div>
+            <div class="red-border-wrap">
+                <div class="small-12 columns sizing-chart-desktop">
+                    <div class="table-bg">
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th class="sizing-chart-left-col">&nbsp;</th>
+                                    <th class="sizing-chart-variants"
+                                        colspan="[% product.variants[active_variant].sizes.length %]"
+                                    >
+                            <span v-for="variant in product.variants">
+                            <input type="radio"
+                                   id="variant-[% variant.name %]"
+                                   value="[% $index %]"
+                                   v-model="active_variant"
+                                   v-bind:checked="$index == 0 ? 'true' : null"
+                            >
+                            <label for="variant-[% variant.name %]">
+                                [% variant.name %]
+                            </label>
+
+                            </span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="sizing-chart-left-col">
+                                        <select
+                                            v-model="selected_product"
+                                            @change="update_product()"
+                                            class="sizing-chart__product-select"
+                                        >
+                                            <option
+                                                v-for="product in products"
+                                                value="[% product %]"
+                                                v-bind:checked="product.name == selected_product ? 'true' : null"
+                                            >
+                                                [% product %]
+                                            </option>
+                                        </select><br>
+                                        <img v-bind:src="product.image" class="sizing-chart-thumb" alt="">
+                                    </th>
+                                    <th
+                                        v-for="size in product.variants[active_variant].sizes"
+                                        v-bind:class="['abbrev', match_guess(size.height_weights) ? 'active' : null]"
+                                        v-bind:style="{width: (100 - 18) / product.variants[active_variant].sizes.length + '%'}"
+                                    >
+                                        <span>[% size.abbrev %]</span>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr v-for="dimension in product.variants[active_variant].dimension_types_desktop">
+                                    <td
+                                        class="sizing-chart-left-col"
+                                    >[% dimension %]
+                                    </td>
+                                    <td
+                                        v-for="size in product.variants[active_variant].sizes"
+                                        v-bind:class="[
+                                        match_guess(size.height_weights) ? 'active' : null,
+                                        $parent.$index + 1 == size.dimensions.length ? 'last' : null
+                                    ]"
+                                        v-bind:style="{width: (100 - 18) / product.variants[active_variant].sizes.length + '%'}"
+                                    >
+                                        [%% break_out_format_sizes(size.dimensions[$parent.$index], active_adjuster) %%]
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-12 columns sizing-chart-mobile">
+                    <div class="table-bg">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th v-for="dimension in product.variants[active_variant].dimension_types_mobile">
+                                    [% dimension %]
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="size in product.variants[active_variant].sizes"
+                            >
+                                <th
+                                    v-bind:class="['abbrev', match_guess(size.height_weights) ? 'active' : null]"
+                                ><span>[% size.abbrev %]</span></th>
+                                <td v-for="dimension in product.variants[active_variant].dimension_types_mobile">
+                                    [%% break_out_format_sizes(size.dimensions[$index], active_adjuster) %%]
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-guesstimator">
+            <div class="small-12 columns">
+                <div class="red-border-wrap">
+                    <h3>Sizing guestimator</h3>
+                    <span class="guesstimator-tellus">Tell us&hellip;</span>
+                    <select class="guesstimator-height" v-model="height">
+                        <option value="0">Select your Height</option>
+                        <option value="505">&nbsp;5' 5" (165 cm)</option>
+                        <option value="506">&nbsp;5' 6" (168 cm)</option>
+                        <option value="507">&nbsp;5' 7" (170 cm)</option>
+                        <option value="508">&nbsp;5' 8" (173 cm)</option>
+                        <option value="509">&nbsp;5' 9" (175 cm)</option>
+                        <option value="510">&nbsp;5' 10" (178 cm)</option>
+                        <option value="511">&nbsp;5' 11" (180 cm)</option>
+                        <option value="600">&nbsp;6' 0" (183 cm)</option>
+                        <option value="601">&nbsp;6' 1" (185 cm)</option>
+                        <option value="602">&nbsp;6' 2" (188 cm)</option>
+                    </select>
+                    <select class="guesstimator-weight" v-model="weight">
+                        <option value="0">Select your Weight</option>
+                        <option value="130">&nbsp;130-140 lbs (59-63 kg)</option>
+                        <option value="141">&nbsp;141-150 lbs (64-68 kg)</option>
+                        <option value="151">&nbsp;151-160 lbs (69-72 kg)</option>
+                        <option value="161">&nbsp;161-170 lbs (73-77 kg)</option>
+                        <option value="171">&nbsp;171-180 lbs (78-82 kg)</option>
+                        <option value="181">&nbsp;181-190 lbs (83-86 kg)</option>
+                        <option value="191">&nbsp;191-200 lbs (87-91 kg)</option>
+                        <option value="201">&nbsp;201-210 lbs (92-95 kg)</option>
+                        <option value="211">&nbsp;211-220 lbs (96-100 kg)</option>
+                        <option value="221">&nbsp;221-230 lbs (101-104 kg)</option>
+                        <option value="231">&nbsp;231-240 lbs (105-109 kg)</option>
+                        <option value="241">&nbsp;241-250 lbs (110-113 kg)</option>
+                        <option value="251">&nbsp;251-260 lbs (114-118 kg)</option>
+                        <option value="261">&nbsp;261-270 lbs (119-122 kg)</option>
+                        <option value="271">&nbsp;271-280 lbs (123-127 kg)</option>
+                    </select>
+                <span class="guesstimator-found" v-show="found_match">
+                    Your size is:
+                    <img src="/images/sizing-up-arrow.svg" width="25" height="29" alt="">
+                    <button class="reset_guess" type="button" @click="reset_height_weight">Reset</button>
+                </span></div>
+            </div>
+        </div>
+        <div class="row row--sizing-faq">
+            <div class="small-12 columns">
+                <div class="red-border-wrap">
+                    <h3>Need help?</h3>
+                    <p>Customer service is just a <a href="#">click away&hellip;</a></p>
+                    <p>View our <a href="#">FAQs</a></p>
+                    <p><a href="#">How to take your measurements.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

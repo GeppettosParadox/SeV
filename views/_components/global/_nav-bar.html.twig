@@ -1,0 +1,33 @@
+<nav class="top-bar nav-bar {{- homeNavBar is defined ? ' nav-bar--home' : ' nav-bar--interior' }}" data-topbar role="navigation">
+    <div class="container">
+        <div class="small-12 columns">
+            <a href="/" class="centered-logo">SCOTTeVEST</a>
+            <div class="top-bar-left">
+                <button class="launch-nav-btn" data-toggle="offCanvas">
+                    <span class="show-for-medium">Menu</span>
+                </button>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li class="show-for-medium"><span class="icon-telephone hide-for-medium-only"></span> <a
+                            style="display: inline; padding: 0 1em 0 0;" href="tel:8665551234">866.555.1234</a></li>
+                    <li class="show-for-medium"><a href="#help">About</a></li>
+                    <li class="show-for-medium"><a href="#help">Help</a></li>
+                    <li class="show-for-medium"><a href="#help">Sign In</a></li>
+                    <li class="show-for-medium"><a href="#help"><img src="/images/search-icon.svg" alt="Search"></a></li>
+                    <li class="cart-button-wrap">
+                        <button class="nav-bar__close-cart-btn">
+                            <span class="show-for-sr">Close Cart</span>
+                        </button>
+                        <button class="nav-bar__cart-btn">
+                            <span class="show-for-sr">Cart</span>
+                            <span class="cart-num">4</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{% include "../global/_cart.html.twig" %}

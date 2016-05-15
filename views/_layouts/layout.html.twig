@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title }} | SCOTTeVEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://vjs.zencdn.net/5.9.2/video-js.css" rel="stylesheet">
+    <script>document.createElement("picture");</script>
+    <script src="/vendor/picturefill/dist/picturefill.min.js" async></script>
+    <script type="text/javascript" data-main="/scripts/vue.js" src="/scripts/vue.js"></script> <!-- TODO: Change to vue.min.js for production -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5ec26a">
+    <meta name="apple-mobile-web-app-title" content="SCOTTeVEST">
+    <meta name="application-name" content="SCOTTeVEST">
+    <meta name="msapplication-TileColor" content="#5ec26a">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#5ec26a">
+
+    <!-- Standard SEO -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="referrer" content="always"/>
+    <meta name="robots" content="all"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="canonical" href="{# Replace with real URL for this page #}#}"/>
+    <meta name="geo.region" content="{# Replace with real data #}"/>
+    <meta name="geo.position" content="{# Replace with real lat/long data #}"/>
+    <meta name="ICBM" content="{# Replace with real data #}"/>
+    <meta name="geo.placename" content="SCOTTeVEST"/>
+
+    <!-- Facebook OpenGraph -->
+
+    <meta property="fb:profile_id" content="{# Replace with real data #}"/>
+    <meta property="og:type" content="{# Replace with real data #}"/>
+    <meta property="og:locale" content="en_us"/>
+    <meta property="og:url" content="{# Replace with real data #}"/>
+    <meta property="og:title" content="{# Replace with real data #}"/>
+    <meta property="og:site_name" content="{# Replace with real data #}"/>
+    <meta property="og:see_also" content="{# Replace with social media URL 1 #}"/>
+    <meta property="og:see_also"
+          content="{# Replace with social media URL 2...#}"/>
+
+    <!-- Twitter Card -->
+
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:site" content="{# Replace with Twitter ID with @ sign #}"/>
+    <meta property="twitter:creator" content="{# Replace with Twitter ID with @ sign #}"/>
+    <meta property="twitter:title" content="{# Replace with twitter title #}"/>
+
+</head>
+
+<body>
+
+{% if errorBar is defined %}
+    {% include '../_components/global/_error-bar.html.twig' with {
+    'errorText': errorBar
+    } only %}
+{% endif %}
+
+<div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+
+            <!-- Close button -->
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true"><img src="/images/close-cart.svg" alt="Close" width="30" height="30"></span>
+            </button>
+
+            <!-- Menu -->
+            <ul class="vertical menu">
+                <li><a href="/products/category">All Products</a></li>
+                <li><a href="/products/category">Men</a></li>
+                <li><a href="/products/category">Women</a></li>
+                <li><a href="#">Daily sale</a></li>
+                <li><a href="#">Outlet</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+        </div>
+
+        <div class="off-canvas-content" data-off-canvas-content>
+            <header class="site-header">
+                {% include '../_components/global/_offer-bar.html.twig' %}
+                {% include '../_components/global/_intl-bar.html.twig' %}
+                {% include '../_components/global/_nav-bar.html.twig' %}
+            </header>
+            {% block content %}{% endblock %}
+            <footer class="site-footer">
+                {% include '../_components/global/_footer.html.twig' %}
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="small reveal" id="quickview" data-reveal></div>
+<div class="large reveal" id="sizing-modal" data-reveal></div>
+
+<button class="live-chat-btn">
+    <span class="live-chat-btn__text"><span>Talk to Online Personal Shopper</span></span>
+</button>
+
+<script src="https://vjs.zencdn.net/5.9.2/video.js"></script>
+<script type="text/javascript" data-main="/scripts/jquery.js" src="/vendor/jquery/dist/jquery.js"></script>
+<script type="text/javascript" data-main="/scripts/vendor/jquery-ui/jquery-ui.min.js"
+        src="/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" data-main="/scripts/vendor/twentytwenty/jquery.event.move.js"
+        src="/vendor/twentytwenty/js/jquery.event.move.js"></script>
+<script type="text/javascript" data-main="/scripts/vendor/twentytwenty/jquery.twentytwenty.js"
+        src="/vendor/twentytwenty/js/jquery.twentytwenty.js"></script>
+<script type="text/javascript" data-main="/scripts/vendor/foundation.js"
+        src="/vendor/foundation-sites/dist/foundation.js"></script>
+<script type="text/javascript" data-main="/scripts/vendor/slick.js"
+        src="/vendor/slick-carousel/slick/slick.js"></script>
+<script type="text/javascript" data-main="/scripts/vendor/jquery.stick-kit.min.js"
+        src="/vendor/jquery.stick-kit.min.js"></script>
+<script type="text/javascript" data-main="/scripts/vendor/jquery-selectboxit/src/javascripts/jquery.selectBoxIt.min.js"
+        src="/vendor/jquery-selectboxit/src/javascripts/jquery.selectBoxIt.min.js"></script>
+<script type="text/javascript" data-main="/scripts/main.js" src="/scripts/main.js"></script>
+{% block pagescripts %}{% endblock %}
+</body>
+</html>

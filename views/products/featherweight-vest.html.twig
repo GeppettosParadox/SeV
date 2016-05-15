@@ -1,0 +1,12 @@
+{% extends "../_layouts/layout.html.twig" %}
+
+{% set title = "Featherweight Vest" %}
+
+{% block content %}
+    {% include '../_components/product-detail/_product-detail-top.html.twig' %}
+    {% include '../_components/product-detail/_product-detail-bottom.html.twig' %}
+    {% include '../_components/global/_whats-inside.html.twig' with {
+        'size': 'small'
+    } only %}
+    {% include '../products/_related-products.html.twig' %}
+{% endblock %}

@@ -1,0 +1,42 @@
+<form class="reveal-container">
+    {% include "../products/_product-category.html.twig" with {
+    hide_quickview: true,
+    show_pocket_count: true
+    } %}
+    <div class="available-sizes">
+        <h2>Available Sizes</h2>
+        <div class="row">
+            <div class="small-8 columns size-options">
+                <button type="button" name="size" title="small" value="small">S</button>
+                <button type="button" name="size" title="medium" value="medium">M</button>
+                <button type="button" name="size" title="large" value="large">L</button>
+                <button type="button" name="size" title="extra large" value="xlarge" disabled>XL</button>
+            </div>
+            <nav class="small-4 columns color-options__carousel-nav">
+
+            </nav>
+        </div>
+        <div class="color-options__graphical-carousel__wrapper">
+            <div class="color-options__graphical-carousel">
+                    {% for i in 0..5 %}
+                <div>
+                        <button type="button" name="color" value="green">
+                            <img src="/uploads/size-graphical/green-qzip.png" alt="Green quarter zip"/>
+                        </button>
+                </div>
+                    {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-8 columns end quick-view-details">
+                <a href="#">Product Details <span class="icon-arrow"></span></a>
+            </div>
+            <button class="quick-view-buy-now">
+                Buy now <span class="icon-arrow"></span>
+            </button>
+        </div>
+    </div>
+</form>
+<button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true"><img src="/images/close-cart.svg" alt="" width="30" height="30"></span>
+</button>

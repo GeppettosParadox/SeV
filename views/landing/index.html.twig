@@ -1,0 +1,105 @@
+{% extends "../_layouts/layout.html.twig" %}
+
+{% set title = "Landing Page" %}
+{% set homeNavBar = true %}
+
+{% block content %}
+
+    {% include '../_components/landing/_hero.html.twig' %}
+
+    <div id="main">
+        {% include '../_components/global/_basic-header.html.twig' with {
+        header: 'Jackets',
+        lines: [
+        'Smooth cotton blended with extra soft cashmere.',
+        'Valid April/6 &ndash; April/14. Starts April/8 online.'
+        ]
+        } %}
+    </div>
+
+    <div class="container">
+
+        <div class="row row--landing" data-equalizer data-equalize-on="medium" data-equalize-on-stack="true">
+            <img class="overflow-image overflow-image--left" src="/uploads/side_image/side-1.jpg" alt="">
+            <div class="small-12 medium-5 medium-offset-1 large-4 large-offset-2 columns" data-equalizer-watch>
+                <div>
+                    <video class="video-js vjs-default-skin" width="375px" height="496px"
+                           controls preload="auto" poster='/uploads/product_thumbs/zipped-up-too-far.jpg'
+                           data-setup='{ "aspectRatio":"375:496"}'>
+                        <source src="/uploads/videos/vid.mp4" type='video/mp4'/>
+                    </video>
+                </div>
+            </div>
+            <div class="small-12 medium-5 large-4 columns end" data-equalizer-watch>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                    Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum,
+                    nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc.</p>
+            </div>
+        </div>
+
+    </div>
+
+    {% include '../_components/global/_product-grid-row.html.twig' %}
+
+    {% include '../_components/global/_basic-header.html.twig' with {
+    header: 'Jackets',
+    lines: [
+    'Smooth cotton blended with extra soft cashmere.',
+    'Valid April/6 &ndash; April/14. Starts April/8 online.'
+    ]
+    } %}
+
+    <div class="container container--row-landing">
+
+        <div class="row row--landing" data-equalizer data-equalize-on="medium" data-equalize-on-stack="true">
+            <img class="overflow-image overflow-image--right" src="/uploads/side_image/side-2.jpg" alt="">
+            <div class="small-12 medium-6 large-5 large-offset-1 columns" data-equalizer-watch>
+                {% set product = {
+                title: 'SeV Susie Qzip',
+                price: 120,
+                salesPrice: 110,
+                imgPath: '/uploads/xray_grid/pink_vest.jpg',
+                xrayImgPath: '/uploads/xray_grid/pink_vest-xray.jpg'
+                } %}
+                {% for i in 0..0 %}
+                    <a href="/products/featherweight-vest" class="column product-grid__product"
+                       data-productcat="{{ i < 3 ? 'men' : 'women' }}">
+                        <button class="product-grid__quick-view-btn" data-open="quickview" data-href="/ajax/quickview"></button>
+                        <div class="xray-img">
+                            <img src="{{ product.imgPath }}" alt="">
+                            <img src="{{ product.xrayImgPath }}" alt="">
+                        </div>
+                        <div class="product-grid__details">
+                            <div class="product-grid__product-title">
+                                {{ product.title }}
+                            </div>
+                            <div
+                                class="product-grid__price {{ product.salesPrice ? 'product-grid__price--sales-price' }}">
+                                ${{ product.salesPrice ? product.salesPrice : product.price }}
+                            </div>
+                            {% if product.salesPrice %}
+                                <div class="product-grid__was-price">
+                                    was
+                                    <del>${{ product.price }}</del>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="small-12 medium-5 large-4 columns end" data-equalizer-watch>
+                <div class="smalloverlay-img">
+                    <img src="/uploads/side_image/zip.jpg" alt="">
+                    <div class="overlay-text">
+                        <p>This is the coolest jacket you’re ever gonna wear.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {% include '../_components/global/_product-grid-row.html.twig' %}
+
+{% endblock %}

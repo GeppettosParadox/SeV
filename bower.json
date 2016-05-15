@@ -1,0 +1,29 @@
+{
+  "name": "scottevest",
+  "version": "1.0.0",
+  "authors": [
+    "Boston Interactive <info@bostoninteractive.com>"
+  ],
+  "description": "SCOTTeVEST 2016 Site Templates",
+  "main": "index.html",
+  "dependencies": {
+    "foundation-sites": "~6.2.0",
+    "motion-ui": "~1.2.2",
+    "jquery": "~2.2.0",
+    "jquery-ui": "~1.11.4",
+    "requirejs": "~2.1.16",
+    "jquery-selectboxit": "3.8.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "devDependencies": {
+    "twentytwenty": "*",
+    "slick-carousel": "slick.js#^1.5.9"
+  }
+}

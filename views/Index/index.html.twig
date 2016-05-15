@@ -1,0 +1,13 @@
+{% extends "../_layouts/layout.html.twig" %}
+
+{% set title = "Travel Clothing for Men and Women" %}
+{% set homeNavBar = true %}
+
+{% block content %}
+    {% include '../_components/homepage/_hero.html.twig' %}
+    {% include '../_components/homepage/_product-grid.html.twig' %}
+    {% include '../_components/homepage/_explore-products.html.twig' %}
+    {% include '../_components/global/_whats-inside.html.twig' %}
+    {% include '../_components/homepage/_quote.html.twig' %}
+    {% include '../_components/homepage/_company-logos.html.twig' %}
+{% endblock %}

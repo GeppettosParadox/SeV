@@ -1,0 +1,106 @@
+<script>
+    var initial_product = "jacket";
+
+    Vue.config.delimiters = ['[%', '%]'];
+    Vue.config.unsafeDelimiters = ['[%%', '%%]'];
+
+    var sizing_chart_vm = new Vue({
+        el: '#sizing-chart',
+        data: {
+            products: [],
+            product: {},
+            active_adjuster: 1.0,
+            active_variant: "0",
+            weight: "",
+            height: "",
+            found_match: false,
+            selected_product: initial_product
+        },
+        computed: {
+            height_weight: function () {
+                return this.height + "_" + this.weight;
+            }
+        },
+        methods: {
+            reset_height_weight: function() {
+                this.height = '0';
+                this.weight = '0';
+                $('span.guesstimator-height .selectboxit-text')
+                    .attr('data-val', '0');
+                $('span.guesstimator-height .selectboxit-text')[0].textContent = 'Select your Height';
+                $('span.guesstimator-weight .selectboxit-text')
+                    .attr('data-val', '0');
+                $('span.guesstimator-weight .selectboxit-text')[0].textContent = 'Select your Weight';
+            },
+            break_out_format_sizes: function (sizes, adjuster) {
+                return sizes
+                    .map(function (size) {
+                        size = size * adjuster;
+                        size = '' + (Math.round(size * 2) / 2).toFixed(1);
+                        return size.replace('.0', '')
+                    })
+                    .join('&ndash;')
+            },
+            match_guess: function (height_weights) {
+                return (height_weights.indexOf(this.height_weight) != -1);
+            },
+            update_product: function () {
+                var self = this;
+                $.ajax({
+                    url: "/sizing_data/" + self.selected_product + ".json",
+                    dataType: 'json',
+                    async: false,
+                    success: function (response) {
+                        self.product = response.product;
+                    }
+                });
+            }
+        },
+        ready: function () {
+            var self = this;
+            $.ajax({
+                url: "/sizing_data/_index.json",
+                dataType: 'json',
+                async: false,
+                success: function (response) {
+                    self.$data.products = response.products;
+                }
+            });
+            $.ajax({
+                url: "/sizing_data/" + initial_product + ".json",
+                dataType: 'json',
+                async: false,
+                success: function (response) {
+                    self.$data.product = response.product;
+                }
+            });
+            $("select:not(.sizing-chart__product-select)").selectBoxIt({
+                autoWidth: false,
+                native: true,
+                copyClasses: "container"
+            });
+        }
+    });
+
+    sizing_chart_vm.$watch('height_weight', function (val) {
+        var found_true = false;
+        var sizes = this.product.variants[this.active_variant].sizes;
+        for (var i = 0; i < sizes.length; i++) {
+            for (var j = 0; j < sizes[i].height_weights.length; j++) {
+                if (this.height_weight === sizes[i].height_weights[j]) {
+                    this.found_match = true;
+                    found_true = true;
+                }
+            }
+        }
+        if (!found_true) {
+            this.found_match = false;
+        }
+    });
+
+    $('.sizing-chart-adjusters label').on('click', function () {
+        $('.sizing-chart-adjusters label').removeClass('active');
+        $(this).addClass('active');
+    });
+
+</script>

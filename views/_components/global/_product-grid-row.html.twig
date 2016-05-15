@@ -1,0 +1,44 @@
+<div class="related-products product-grid container product-grid--row">
+    <div class="row related-products__product-row">
+        <div class="small-12 columns related-products__products">
+            {% set product = {
+            title: 'SeV Susie Qzip',
+            price: 120,
+            salesPrice: 110,
+            imgPath: '/uploads/xray_grid/pink_vest.jpg',
+            xrayImgPath: '/uploads/xray_grid/pink_vest-xray.jpg'
+            } %}
+            {% for i in 0..3 %}
+                <a href="/products/featherweight-vest" class="medium-6 large-3 column related-products__product"
+                   data-productcat="{{ i < 3 ? 'men' : 'women' }}">
+                    <button class="product-grid__quick-view-btn product-grid__quick-view-btn--small"
+                            data-open="quickview" data-href="/ajax/quickview"></button>
+                    <div class="xray-img">
+                        <img src="{{ product.imgPath }}" alt="">
+                        <img src="{{ product.xrayImgPath }}" alt="">
+                    </div>
+                    <div class="product-grid__details">
+                        <div class="product-grid__product-title">
+                            {{ product.title }}
+                        </div>
+                        <div
+                            class="product-grid__price {{ product.salesPrice ? 'product-grid__price--sales-price' }}">
+                            ${{ product.salesPrice ? product.salesPrice : product.price }}
+                        </div>
+                        {% if product.salesPrice %}
+                            <div class="product-grid__was-price">
+                                was
+                                <del>${{ product.price }}</del>
+                            </div>
+                        {% endif %}
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns text-center">
+            <a href="#" class="green-more bold">View More</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+{% extends "../_layouts/layout.html.twig" %}
+
+{% set title = "Featherweight Vest" %}
+
+{% block content %}
+
+    <div class="page-hero container">
+        <picture>
+            <!--[if IE 9]>
+            <video style="display: none;"><![endif]-->
+            <source srcset="/uploads/page_hero/hero.jpg" media="(min-width: 1025px)">
+            <source srcset="/uploads/page_hero/hero_1024.jpg" media="(min-width: 481px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/uploads/page_hero/hero_480.jpg"
+                 srcset="/uploads/page_hero/hero_480.jpg" alt=""
+            >
+        </picture>
+        <div class="page-hero__overlay row columns small-12">
+            <nav class="page-hero__nav">
+                <ul>
+                    <li class="is-active"><a href="#">women</a></li>
+                    <li><a href="#">men</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img class="page-hero-angle" src="/images/bottom-angle.svg" alt="">
+    </div>
+
+    {% include '../products/_filter.html.twig' %}
+
+    <div class="category product-grid container">
+        <div class="tab-picker row categories-nav">
+            <div class="button-group text-center">
+                <button class="button active" data-productcat="all">All</button>
+                <button class="button" data-productcat="vests">Vests</button>
+                <button class="button" data-productcat="jackets">Jackets</button>
+                <button class="button" data-productcat="hoodies">Hoodies</button>
+                <button class="button" data-productcat="pants">Pants</button>
+                <button class="button" data-productcat="shirts">Shirts</button>
+                <button class="button" data-productcat="other">Other</button>
+            </div>
+        </div>
+        <div class="row category__product-row">
+            <div class="small-12 columns category__products">
+                {% for i in 0..14 %}
+                    {% set cat = "" %}
+                    {% if i == 0 %}{% set cat = "vests" %}{% endif %}
+                    {% if i >= 1 and i <= 2 %}{% set cat = "jackets" %}{% endif %}
+                    {% if i >= 3 and i <= 5 %}{% set cat = "hoodies" %}{% endif %}
+                    {% if i >= 6 and i <= 9 %}{% set cat = "pants" %}{% endif %}
+                    {% if i >= 10 and i <= 12 %}{% set cat = "shirts" %}{% endif %}
+                    {% if i >= 13 and i <= 13 %}{% set cat = "other" %}{% endif %}
+                    <a href="/products/featherweight-vest" class="medium-6 large-4 column category__product"
+                         data-productcat="{{ cat }}">
+                        {% include '../products/_product-category.html.twig' %}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

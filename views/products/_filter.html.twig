@@ -1,0 +1,167 @@
+<div class="product-filter">
+    <div class="container">
+        <div class="row small-12 columns product-filter__settings">
+            <a href="#" class="product-filter__toggle-button">
+                Filter
+            </a>
+            <span class="product-filter__sort">
+                Sort by
+                <select>
+                    <option value="featured">Featured products</option>
+                    <option value="price">Price</option>
+                    <option value="za">Name A to Z</option>
+                    <option value="az">Name Z to A</option>
+                </select>
+            </span>
+        </div>
+        <form>
+            <div class="row small-12 columns product-filter__inner">
+                <div class="row product-filter__options">
+                    <div class="product-filter__col small-12 medium-4 large-2 columns">
+                        <h4 class="product-filter__heading">Price</h4>
+                        <div class="slider price-slider" data-slider data-start="0" data-initial-start="30"
+                             data-end="250" data-initial-end="220">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1"
+                                  aria-controls="priceSliderFrom"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1"
+                                  aria-controls="priceSliderTo"></span>
+                            <input type="hidden" id="priceSliderFrom">
+                            <input type="hidden" id="priceSliderTo">
+                        </div>
+                        <div class="price-slider__info">
+                            <span class="price-slider__info-from">
+                                from <span class="value price-slider__info-from__value">$30</span>
+                            </span>
+                            <span class="price-slider__info-to">
+                                to <span class="value price-slider__info-to__value">$250</span>
+
+                        </div>
+
+                    </div>
+                    <div class="product-filter__col small-12 medium-4 large-2 columns">
+                        <h4 class="product-filter__heading">Pockets</h4>
+                        <div class="slider pocket-slider" data-slider data-start="2" data-initial-start="2"
+                             data-end="58" data-initial-end="58">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1"
+                                  aria-controls="pocketSliderFrom"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1"
+                                  aria-controls="pocketSliderTo"></span>
+                            <input type="hidden" id="pocketSliderFrom">
+                            <input type="hidden" id="pocketSliderTo">
+                        </div>
+                        <div class="pocket-slider__info">
+                            <span class="pocket-slider__info-from">
+                                from <span class="value pocket-slider__info-from__value">2</span>
+                            </span>
+                            <span class="pocket-slider__info-to">
+                                to <span class="value pocket-slider__info-to__value">58</span>
+
+                        </div>
+
+                    </div>
+                    <div class="product-filter__col product-filter__col__sizes small-12 medium-4 large-2 columns">
+                        <h4 class="product-filter__heading">Size</h4>
+                        <div class="product-filter__sizes">
+                            <button type="button" name="size" title="small" value="small">
+                                <span class="size">S</span>
+                                <span class="num">2</span>
+                                <span class="show-for-sr">Filter Small</span>
+                            </button>
+                            <button type="button" name="size" title="medium" value="medium">
+                                <span class="size">M</span>
+                                <span class="num">31</span>
+                                <span class="show-for-sr">Filter Medium</span>
+                            </button>
+                            <button type="button" name="size" title="large" value="large">
+                                <span class="size">L</span>
+                                <span class="num">5</span>
+                                <span class="show-for-sr">Filter Large</span>
+                            </button>
+                            <button type="button" name="size" title="extraLarge" value="extraLarge">
+                                <span class="size">XL</span>
+                                <span class="num">9</span>
+                                <span class="show-for-sr">Filter Extra Large</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row show-for-medium-only"></div>
+                    <div class="product-filter__col small-12 medium-6 large-3 columns">
+                        <h4 class="product-filter__heading">Features</h4>
+                        <div class="product-filter__checkboxes">
+                            <button type="button" name="feature" title="bluetooth pocket" value="bluetooth pocket">
+                                <span class="checkbox"></span>
+                                <span class="text">Bluetooth Pocket</span>
+                                <span class="num">12</span>
+                            </button>
+                            <button type="button" name="feature" title="bottle holder" value="bottle holder">
+                                <span class="checkbox"></span>
+                                <span class="text">Bottle Holder</span>
+                                <span class="num">4</span>
+                            </button>
+                            <button type="button" name="feature" title="earbud pockets" value="earbud pockets">
+                                <span class="checkbox"></span>
+                                <span class="text">Earbud Pockets</span>
+                                <span class="num">16</span>
+                            </button>
+                            <button type="button" name="feature" title="camera pocket" value="camera pocket">
+                                <span class="checkbox"></span>
+                                <span class="text">Camera Pocket</span>
+                                <span class="num">3</span>
+                            </button>
+                            <button type="button" name="feature" title="touchscreen pocket" value="touchscreen pocket">
+                                <span class="checkbox"></span>
+                                <span class="text">Touchscreen Pocket</span>
+                                <span class="num">23</span>
+                            </button>
+                            <button type="button" name="feature" title="collar loops" value="collar loops">
+                                <span class="checkbox"></span>
+                                <span class="text">Collar Loops</span>
+                                <span class="num">18</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-filter__col small-12 medium-6 large-3 columns">
+                        <h4 class="product-filter__heading">Activities</h4>
+                        <div class="product-filter__checkboxes">
+                            <button type="button" name="activity" title="everyday" value="everyday">
+                                <span class="checkbox"></span>
+                                <span class="text">Everyday</span>
+                                <span class="num">2</span>
+                            </button>
+                            <button type="button" name="activity" title="business travel" value="business travel">
+                                <span class="checkbox"></span>
+                                <span class="text">Business Travel</span>
+                                <span class="num">23</span>
+                            </button>
+                            <button type="button" name="activity" title="photography" value="photography">
+                                <span class="checkbox"></span>
+                                <span class="text">Photography</span>
+                                <span class="num">8</span>
+                            </button>
+                            <button type="button" name="activity" title="outdoors" value="outdoors">
+                                <span class="checkbox"></span>
+                                <span class="text">Outdoors</span>
+                                <span class="num">19</span>
+                            </button>
+                            <button type="button" name="activity" title="hunting" value="hunting">
+                                <span class="checkbox"></span>
+                                <span class="text">Hunting</span>
+                                <span class="num">6</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row product-filter__buttons">
+                    <button type="button" class="button product-filter__reset">
+                        <span>Reset</span>
+                    </button>
+                    <button type="button" class="button product-filter__apply">
+                        Apply <span class="icon-arrow"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

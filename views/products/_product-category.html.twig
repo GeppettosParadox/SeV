@@ -1,0 +1,59 @@
+{% set product = {
+title: 'SeV Susie Qzip',
+price: 120,
+salesPrice: 110,
+imgPath: '/uploads/xray_grid/pink_vest.jpg',
+xrayImgPath: '/uploads/xray_grid/pink_vest-xray.jpg'
+} %}
+
+{% if hide_quickview is not defined %}
+    <button class="product-grid__quick-view-btn product-grid__quick-view-btn--small"
+            data-open="quickview" data-href="/ajax/quickview"></button>
+{% endif %}
+<div class="xray-img">
+    <img src="{{ product.imgPath }}" alt="">
+    <img src="{{ product.xrayImgPath }}" alt="">
+</div>
+<div class="product-grid__details">
+    <div class="product-grid__product-title">
+        {{ product.title }}
+    </div>
+    <div
+        class="product-grid__price {{ product.salesPrice ? 'product-grid__price--sales-price' }}">
+        ${{ product.salesPrice ? product.salesPrice : product.price }}
+    </div>
+    {% if product.salesPrice %}
+        <div class="product-grid__was-price">
+            was
+            <del>${{ product.price }}</del>
+        </div>
+    {% endif %}
+</div>
+<div class="product-grid__colors">
+    <div class="color-options">
+        <div class="color-options__row">
+            <button type="button" name="color" title="red" value="red"
+                    style="background: #f90808;">
+                <span class="show-for-sr">Order in Red</span>
+            </button>
+        </div>
+        <div class="color-options__row">
+            <button type="button" name="color" title="gray" value="gray"
+                    style="background: #606c82;">
+                <span class="show-for-sr">Order in Gray</span>
+            </button>
+        </div>
+        <div class="color-options__row">
+            <button type="button" name="color" title="blue" value="blue"
+                    style="background: #50b3cf;">
+                <span class="show-for-sr">Order in Blue</span>
+            </button>
+        </div>
+    </div>
+</div>
+{% if show_pocket_count is defined %}
+    <div class="pocket-count">
+        <strong>43</strong>
+        <span>Pockets</span>
+    </div>
+{% endif %}

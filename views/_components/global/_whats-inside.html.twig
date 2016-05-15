@@ -1,0 +1,44 @@
+<div class="whats-inside container {% if size == 'small' %}whats-inside--small{% endif %}">
+
+    {% if size == 'small' %}
+        <picture class="whats-inside__bg">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/uploads/features_bg/features_bg_small.jpg" media="(min-width: 1025px)">
+            <source srcset="/uploads/features_bg/features_bg_small_1024.jpg" media="(min-width: 600px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/uploads/features_bg/features_bg_small_480.jpg"
+                 srcset="/uploads/features_bg/features_bg_small_480.jpg" alt=""
+            >
+        </picture>
+    {% else %}
+        <picture class="whats-inside__bg">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/uploads/features_bg/features_bg.jpg" media="(min-width: 1025px)">
+            <source srcset="/uploads/features_bg/features_bg_1024.jpg" media="(min-width: 481px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/uploads/features_bg/features_bg_480.jpg"
+                 srcset="/uploads/features_bg/features_bg_480.jpg" alt=""
+            >
+        </picture>
+    {% endif %}
+
+    <div class="row whats-inside__overlay text-center">
+        <div class="small-12 medium-10 medium-offset-1 columns">
+            <h2>What&rsquo;s Inside</h2>
+            <div class="whats-inside__icons">
+                {% for i in range(0,7) -%}
+                    <div class="whats-inside__icon">
+                        <img src="/uploads/feature_icons/{{ loop.index is odd ? 'bluetooth' ? 'c-icon' }}.png" alt="">
+                        <h3>Bluetooth Pocket</h3>
+                    </div>
+                {%- endfor %}
+            </div>
+            <div class="whats-inside__media row">
+                <div class="small-12 medium-8 medium-offset-2 large-10 large-offset-1 columns">
+                    <img src="http://placehold.it/1200x676" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

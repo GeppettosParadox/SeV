@@ -1,0 +1,53 @@
+<div class="product-grid product-grid--xray container">
+    <h2 class="product-grid__heading section-heading">
+        Featured products
+    </h2>
+    <div class="tab-picker row">
+        <div class="button-group text-center">
+            <button class="button active" data-productcat="men">Men</button>
+            <button class="button" data-productcat="women">Women</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            <div class="small-up-1 medium-up-2 product-grid__products">
+                {% set product = {
+                    title: 'SeV Susie Qzip',
+                    price: 120,
+                    salesPrice: 110,
+                    imgPath: '/uploads/xray_grid/pink_vest.jpg',
+                    xrayImgPath: '/uploads/xray_grid/pink_vest-xray.jpg'
+                } %}
+                {% for i in 0..3 %}
+                    <a href="/products/featherweight-vest" class="column product-grid__product" data-productcat="{{ i < 3 ? 'men' : 'women' }}">
+                        <button class="product-grid__quick-view-btn" data-open="quickview" data-href="/ajax/quickview"></button>
+                        <div class="xray-img">
+                            <img src="{{ product.imgPath }}" alt="">
+                            <img src="{{ product.xrayImgPath }}" alt="">
+                        </div>
+                        <div class="product-grid__details">
+                            <div class="product-grid__product-title">
+                                {{ product.title }}
+                            </div>
+                            <div class="product-grid__price {{ product.salesPrice ? 'product-grid__price--sales-price' }}">
+                                ${{ product.salesPrice ? product.salesPrice : product.price }}
+                            </div>
+                            {% if product.salesPrice %}
+                                <div class="product-grid__was-price">
+                                    was <del>${{ product.price }}</del>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="product-grid__more row">
+        <div class="small-12 columns text-center">
+            <a href="/products/category" class="green-more bold">Shop All</a>
+            <a href="/products/category" class="green-more bold">Shop Men</a>
+            <a href="/products/category" class="green-more bold">Shop Women</a>
+        </div>
+    </div>
+</div>
