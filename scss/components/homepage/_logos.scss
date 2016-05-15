@@ -1,0 +1,16 @@
+.homepage-logos {
+    padding-bottom: 3em;
+    .column {
+        @include breakpoint(small only) {
+            &:nth-of-type(n+3) {
+                margin-top: 2em;
+            }
+        }
+        @include breakpoint(medium only) {
+            &:nth-of-type(n+5) {
+                margin-top: 2em;
+            }
+        }
+    }
+}
+

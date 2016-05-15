@@ -1,0 +1,294 @@
+#sizing-modal {
+    background: #fff;
+}
+
+.table-bg {
+    background: url("/images/sizing-stripes.png");
+}
+
+#sizing-chart {
+    padding: 4em 0;
+    table {
+        border-left: 1px solid #ff0000;
+        margin: 0;
+    }
+    table thead, table tbody, table tfoot {
+        background: transparent;
+    }
+    th, td {
+        text-align: center !important;
+    }
+    .last {
+        padding-bottom: 1.5em;
+        position: relative;
+    }
+    .active {
+        font-weight: bold;
+        &.last {
+            &:after {
+                display: block;
+                content: '';
+                width: 76%;
+                height: 3px;
+                background: #5ec26a;
+                position: absolute;
+                bottom: 0;
+                left: 12%;
+                right: 0;
+            }
+        }
+    }
+    .sizing-chart-left-col {
+        text-align: left !important;
+        width: 18%;
+        background: #fff;
+        padding-left: 1em;
+    }
+    tr, thead {
+        background: transparent !important;
+    }
+    table thead, table tbody, table tfoot {
+        border: none;
+    }
+    .sizing-chart-variants {
+        text-align: left !important;
+        width: 82% !important;
+        padding-left: 1.5em;
+        padding-top: 1em;
+    }
+    label.active {
+        font-weight: normal;
+        color: $green;
+        &:after {
+            content: '_';
+            display: inline-block;
+            transform: scaleX(1.5) translateX(33%);
+            position: relative;
+            left: -.3em;
+        }
+    }
+    .table-scroll table {
+        @include breakpoint(medium) {
+            width: 100%;
+        }
+    }
+    > div {
+        transition: opacity .1s ease-in-out;
+    }
+}
+
+[v-cloak] {
+    opacity: 0;
+}
+
+.abbrev {
+    color: $green;
+    font-weight: normal;
+    font-size: 18px;
+    span {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $green;
+        border-radius: 50px;
+        line-height: 50px;
+    }
+    &.active {
+        span {
+            background: $green;
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}
+
+.sizing-chart-thumb {
+    display: block;
+    width: 60px;
+    margin-top: 10px;
+}
+
+.row--sizing-chart-header-row {
+    margin-bottom: 48px;
+}
+
+.row--sizing-chart-header-row {
+    h1 {
+        &:after {
+            display: inline-block;
+            content: '';
+            width: .5em;
+            height: 4px;
+            background: #000;
+            position: relative;
+            bottom: -.2em;
+        }
+    }
+}
+
+.sizing-chart-adjusters {
+    @include breakpoint(medium) {
+        text-align: right;
+    }
+    .sizing-chart-units-text {
+        margin-right: 1.3em;
+    }
+    label {
+        cursor: pointer;
+        margin: 0;
+        display: inline-block;
+        margin-right: 1.3em;
+    }
+}
+
+.sizing-chart-links {
+    a {
+        color: #000;
+        font-weight: bold;
+        font-size: 16px;
+        &.active {
+            color: $green;
+            &:after {
+                content: '_';
+                display: inline-block;
+                transform: scaleX(1.5) translateX(33%);
+            }
+        }
+        + a {
+            margin-left: 3em;
+        }
+    }
+}
+
+.sizing-chart-units-text {
+    color: #999;
+}
+
+.links-and-adjusters-row {
+    padding-bottom: 20px;
+}
+
+.row-guesstimator,
+.row--sizing-faq {
+    h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+.row-guesstimator {
+    margin-top: 28px;
+    .selectboxit-btn {
+        font-weight: normal;
+    }
+    h3 {
+        margin-bottom: 1em;
+    }
+}
+
+.row--sizing-faq {
+    margin-top: 28px;
+    a {
+        color: $green;
+    }
+}
+
+.red-border-wrap {
+    border-left: 1px solid #f00;
+    padding: 1em 0 1em 1em;
+}
+
+.guesstimator-tellus,
+.guesstimator-height,
+.guesstimator-weight {
+    margin-right: 1em;
+}
+
+.guesstimator-tellus,
+.guesstimator-height,
+.guesstimator-weight,
+.guesstimator-found {
+    @include breakpoint(small only) {
+        display: block;
+        margin-top: .67em;
+    }
+}
+
+.guesstimator-found {
+    display: inline-block;
+    img {
+        margin-left: .67em;
+    }
+}
+
+.reset_guess {
+    display: inline-block;
+    margin-left: 1em;
+    color: $green;
+}
+
+@include breakpoint(small only) {
+    .sizing-chart-desktop {
+        .row--sizing-chart .links-and-adjusters-row,
+        th.sizing-chart-left-col br,
+        thead > tr:nth-child(1) > th.sizing-chart-left-col,
+        th.sizing-chart-left-col .sizing-chart-thumb,
+        th.abbrev,
+        tbody {
+            display: none;
+        }
+        tr, thead {
+            background: none !important;
+        }
+        .sizing-chart-left-col {
+            padding: 0;
+        }
+        .sizing-chart-variants {
+            padding: 0 0 0 .75em;
+        }
+        .table-bg {
+            background: none;
+        }
+    }
+    .red-border-wrap {
+        border-left: none;
+        padding: 0;
+    }
+    .sizing-chart-adjusters {
+        margin-top: 2em;
+    }
+    #sizing-chart {
+        padding-top: 1.5em;
+    }
+    .row--sizing-chart-header-row {
+        margin-bottom: .8em;
+    }
+}
+
+.sizing-chart-mobile {
+    .table-bg {
+        margin-top: 1em;
+        position: relative;
+        top: -1em;
+    }
+    thead th {
+        padding-top: 2em;
+    }
+    th {
+        font-weight: normal;
+        background: #fff;
+    }
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+
+@include breakpoint(medium) {
+    .row--sizing-chart > .red-border-wrap {
+        border-left: none;
+    }
+    .sizing-chart-desktop {
+        padding-left: 0;
+    }
+}

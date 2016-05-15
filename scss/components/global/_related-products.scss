@@ -1,0 +1,24 @@
+.related-products {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 110px;
+    .section-heading {
+        margin-bottom: 50px;
+        color: #000;
+    }
+}
+
+.product-grid__quick-view-btn,
+.product-grid__details {
+    top: auto;
+    bottom: 100%;
+}
+
+.related-products__product {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.related-products__product-row {
+    margin-top: 2em;
+}

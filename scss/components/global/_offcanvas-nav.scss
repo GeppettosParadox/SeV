@@ -1,0 +1,19 @@
+.off-canvas {
+    background: transparent;
+    font-family: 'Arvo', georgia, serif;
+    ul {
+        margin-top: 1.3em !important;
+        font-size: 30px;
+    }
+    li + li {
+        margin-top: 1em !important;
+    }
+    a {
+        color: #000;
+        line-height: 1.3;
+    }
+}
+
+.js-off-canvas-exit {
+    z-index: 100;
+}

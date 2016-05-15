@@ -1,0 +1,43 @@
+.live-chat-btn {
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    display: inline-block;
+    padding: 0 15px;
+    background-color: $red;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 14px;
+    z-index: 101;
+    transition: background-color .2s ease-in-out;
+    &:hover {
+        background-color: scale-color($red, $lightness: -15%);
+    }
+    span.live-chat-btn__text {
+        position: relative;
+        padding-left: 36px;
+        @include breakpoint(small only) {
+            padding-left: 21px;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 22px;
+            height: 21px;
+            background: transparent url("../images/chat.svg") no-repeat left center;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -9px;
+        }
+        span {
+            @include breakpoint(small only) {
+                display: none;
+            }
+        }
+    }
+    @include breakpoint(medium) {
+        right: 20px;
+    }
+}

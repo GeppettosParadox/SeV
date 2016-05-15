@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Landing Page | SCOTTeVEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://vjs.zencdn.net/5.9.2/video-js.css" rel="stylesheet">
+    <script>
+        document.createElement("picture");
+    </script>
+    <script src="vendor/picturefill/dist/picturefill.min.js" async></script>
+    <script type="text/javascript" data-main="scripts/vue.js" src="scripts/vue.js"></script>
+    <!-- TODO: Change to vue.min.js for production -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5ec26a">
+    <meta name="apple-mobile-web-app-title" content="SCOTTeVEST">
+    <meta name="application-name" content="SCOTTeVEST">
+    <meta name="msapplication-TileColor" content="#5ec26a">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#5ec26a">
+</head>
+
+<body>
+
+            <div class="off-canvas-content" data-off-canvas-content="">
+                <header id="navheader" class="site-header">
+                    <div class="top-bar offer-bar">
+                        <div class="container">
+                            <div class="row">
+                                <div class="small-12 columns">
+                                    <span class="offer-bar__text"><strong>FREE SHIPPING OVER $100</strong> in the U.S.</span><a href="#" class="offer-bar__link show-for-medium">Learn More</a><button class="button offer-bar__btn"><span class="show-for-medium">Get Daily </span>Deals <span class="icon-arrow"></span></button>                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-bar intl-bar">
+                        <div class="container">
+                            <div class="row">
+                                <div class="small-12 columns text-center">
+                                    <strong>50% off international shipping</strong>
+                                    <span>Monday, May 24th through Tuesday, May 26th</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="top-bar nav-bar nav-bar--home" data-topbar="" role="navigation">
+                        <div class="container">
+                            <div class="small-12 columns">
+                                <a href="index.html" class="centered-logo">SCOTTeVEST</a>
+                                <div class="top-bar-left">
+                                    <button class="launch-nav-btn" data-toggle="offCanvas">
+                    <span class="show-for-medium">Menu</span>
+                </button>
+                                </div>
+                                <div class="top-bar-right">
+                                    <ul class="menu">
+                                        <li class="show-for-medium"><span class="icon-telephone hide-for-medium-only"></span> <a style="display: inline; padding: 0 1em 0 0;" href="tel:8665551234.html">866.555.1234</a></li>
+                                        <li class="show-for-medium"><a href="#help">About</a></li>
+                                        <li class="show-for-medium"><a href="#help">Help</a></li>
+                                        <li class="show-for-medium"><a href="#help">Sign In</a></li>
+                                        <li class="show-for-medium">
+                                            <a href="#help"><img src="images/search-icon.svg" alt="Search"></a>
+                                        </li>
+                                        <li class="cart-button-wrap">
+                                            <button class="nav-bar__close-cart-btn">
+                            <span class="show-for-sr">Close Cart</span>
+                        </button>
+                                            <button class="nav-bar__cart-btn">
+                            <span class="show-for-sr">Cart</span>
+                            <span class="cart-num">4</span>
+                        </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <form>
+                        <div class="cart">
+                            <div class="container">
+                                <div class="row small-12 columns">
+                                    <div class="cart__items">
+                                        <div class="cart__top-row row">
+                                            <div class="small-12 medium-3 large-3 columns cart__col cart__col-1">
+                                                2 Items
+                                            </div>
+                                            <div class="small-4 columns cart__col cart__col-3 show-for-small-only">
+                                                Product
+                                            </div>
+                                            <div class="small-2 medium-1 large-1 columns cart__col cart__col-3">
+                                                Size
+                                            </div>
+                                            <div class="small-3 medium-2 large-2 columns cart__col cart__col-4">
+                                                Qty
+                                            </div>
+                                            <div class="medium-4 large-3 columns cart__col cart__col-2 show-for-medium">
+                                                More
+                                            </div>
+                                            <div class="small-3 medium-2 large-2 columns cart__col cart__col-5">
+                                                Price
+                                            </div>
+                                            <div class="large-1 columns cart__col cart__col-6 show-for-large-only">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="cart__title-row row hide-for-large">
+                                            <div class="small-12 cart__col columns">
+                                                <a href="#">
+                                    Sterling Jacket for Men
+                                    <button type="button" class="delete delete--small">Remove</button>
+                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="cart__item row">
+                                            <div class="small-4 medium-3 large-3 columns cart__col cart__col-1">
+                                                <span class="cart__col__inner">
+                                    <a href="#">
+                                        <img src="uploads/product_thumbs/cart-product.png" alt="">
+                                        <span class="cart__item__title show-for-large">
+                                            Sterling Jacket for Men
+                                            <button type="button" class="delete delete--small">Remove</button>
+                                        </span>
+                                                </a>
+                                                </span>
+                                            </div>
+                                            <div class="small-2 medium-1 large-1 columns cart__col cart__col-3">
+                                                <span class="cart__col__inner">
+                                    M
+                                </span>
+                                            </div>
+                                            <div class="small-3 medium-2 large-2 columns cart__col cart__col-4">
+                                                <span class="cart__col__inner">
+                                    <div class="qty-options">
+                                        <button type="button" class="sub">-</button>
+                                        <input type="text" name="qty" title="Quantity" value="1">
+                                        <button type="button" class="add">+</button>
+                                    </div>
+                                </span>
+                                            </div>
+                                            <div class="small-3 cart__col cart__col-6 columns show-for-small-only">
+                                                <span class="cart__col__inner">
+                                    $195
+                                </span>
+                                            </div>
+                                            <div class="small-12 medium-4 large-3 columns cart__col cart__col-5">
+                                                <span class="cart__col__inner">
+                                    <fieldset class="checkboxes">
+                                        <div class="checkbox-row">
+                                            <input id="checkbox-0-1" type="checkbox">
+                                            <label for="checkbox-0-1">
+                                                Gift Box <span class="gray">(+$10)</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox-row">
+                                                <input id="checkbox-0-2" type="checkbox">
+                                                <label for="checkbox-0-2">
+                                                Warranty <span class="gray">(+$10)</span>
+                                            </label>
+                                            </div>
+                                            </fieldset>
+                                            </span>
+                                        </div>
+                                        <div class="small-3 medium-2 large-2 columns cart__col cart__col-6 show-for-medium">
+                                            <span class="cart__col__inner">
+                                    $195
+                                </span>
+                                        </div>
+                                        <div class="large-1 columns cart__col cart__col-7">
+                                            <span class="cart__col__inner">
+                                    <button type="button" class="delete delete--large">Remove</button>
+                                </span>
+                                        </div>
+                                    </div>
+                                    <hr class="cart__horizontal-line">
+                                    <div class="cart__title-row row hide-for-large">
+                                        <div class="small-12 cart__col columns">
+                                            <a href="#">
+                                    Sterling Jacket for Men
+                                    <button type="button" class="delete delete--small">Remove</button>
+                                </a>
+                                        </div>
+                                    </div>
+                                    <div class="cart__item row">
+                                        <div class="small-4 medium-3 large-3 columns cart__col cart__col-1">
+                                            <span class="cart__col__inner">
+                                    <a href="#">
+                                        <img src="uploads/product_thumbs/cart-product.png" alt="">
+                                        <span class="cart__item__title show-for-large">
+                                            Sterling Jacket for Men
+                                            <button type="button" class="delete delete--small">Remove</button>
+                                        </span>
+                                            </a>
+                                            </span>
+                                        </div>
+                                        <div class="small-2 medium-1 large-1 columns cart__col cart__col-3">
+                                            <span class="cart__col__inner">
+                                    M
+                                </span>
+                                        </div>
+                                        <div class="small-3 medium-2 large-2 columns cart__col cart__col-4">
+                                            <span class="cart__col__inner">
+                                    <div class="qty-options">
+                                        <button type="button" class="sub">-</button>
+                                        <input type="text" name="qty" title="Quantity" value="1">
+                                        <button type="button" class="add">+</button>
+                                    </div>
+                                </span>
+                                        </div>
+                                        <div class="small-3 cart__col cart__col-6 columns show-for-small-only">
+                                            <span class="cart__col__inner">
+                                    $195
+                                </span>
+                                        </div>
+                                        <div class="small-12 medium-4 large-3 columns cart__col cart__col-5">
+                                            <span class="cart__col__inner">
+                                    <fieldset class="checkboxes">
+                                        <div class="checkbox-row">
+                                            <input id="checkbox-1-1" type="checkbox">
+                                            <label for="checkbox-1-1">
+                                                Gift Box <span class="gray">(+$10)</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-row">
+                                            <input id="checkbox-1-2" type="checkbox">
+                                            <label for="checkbox-1-2">
+                                                Warranty <span class="gray">(+$10)</span>
+                                            </label>
+                                        </div>
+                                        </fieldset>
+                                        </span>
+                                    </div>
+                                    <div class="small-3 medium-2 large-2 columns cart__col cart__col-6 show-for-medium">
+                                        <span class="cart__col__inner">
+                                    $195
+                                </span>
+                                    </div>
+                                    <div class="large-1 columns cart__col cart__col-7">
+                                        <span class="cart__col__inner">
+                                    <button type="button" class="delete delete--large">Remove</button>
+                                </span>
+                                    </div>
+                                </div>
+                                <hr class="cart__horizontal-line">
+                            </div>
+                            <div class="cart__total row small-12">
+                                <div class="cart__col cart__col__promo-code small-12 medium-8 large-7 columns">
+                                    <span class="cart__col__inner">
+                        <a href="#" class="promo-code-toggle">Enter promo code here</a>
+                        <input type="text" class="promo-code-input" name="promoCode" placeholder="Enter promo code here">
+                    </span>
+                                </div>
+                                <div class="cart__col cart__total-label columns small-9 medium-2 large-2">
+                                    <span class="cart__col__inner">
+                        Total
+                    </span>
+                                </div>
+                                <div class="cart__col cart__total-amount columns small-3 medium-2 large-2">
+                                    <span class="cart__col__inner">
+                        $323
+                    </span>
+                                </div>
+                                <div class="cart__col cart__checkout-button columns large-1">
+                                    <button type="button" class="toggle-checkout-buttons">
+                            Checkout <span class="icon-arrow"></span>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__buttons"><button type="button" class="button cart__buttons__credit-card">
+                    Credit Card <span class="icon-arrow"></span>
+                </button><button type="button" class="button cart__buttons__amazon">
+                    <img src="images/logo-amazon.svg" alt="Amazon"> <span class="icon-arrow"></span>
+                </button><button type="button" class="button cart__buttons__paypal">
+                    <img src="images/logo-paypal.svg" alt="PayPal"> <span class="icon-arrow"></span>
+                </button></div>
+            </div>
+        </div>
+      </div>
+
+
+
+
+    <script src="https://vjs.zencdn.net/5.9.2/video.js"></script>
+    <script type="text/javascript" data-main="scripts/jquery.js" src="vendor/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/jquery-ui/jquery-ui.min.js" src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/twentytwenty/jquery.event.move.js" src="vendor/twentytwenty/js/jquery.event.move.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/twentytwenty/jquery.twentytwenty.js" src="vendor/twentytwenty/js/jquery.twentytwenty.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/foundation.js" src="vendor/foundation-sites/dist/foundation.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/slick.js" src="vendor/slick-carousel/slick/slick.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/jquery.stick-kit.min.js" src="vendor/jquery.stick-kit.min.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/jquery-selectboxit/src/javascripts/jquery.selectBoxIt.min.js" src="vendor/jquery-selectboxit/src/javascripts/jquery.selectBoxIt.min.js"></script>
+    <script type="text/javascript" data-main="scripts/main.js" src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+ul.tab-picker {
+    border: 0;
+    margin-bottom: 1em;
+    li {
+        background: none;
+        border: 0;
+        a {
+            color: #000;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: bold;
+            border: 0;
+            padding: 0 0 0 30px;
+            &:hover {
+                color: $green;
+            }
+        }
+        &:first-child {
+            a {
+                padding-left: 0;
+            }
+        }
+        &.is-active {
+            a {
+                color: $green;
+                &:hover {
+                    color: #009900;
+                }
+                background: none;
+                &:after {
+                    content: '_';
+                    display: inline-block;
+                    transform: scaleX(1.5) translateX(33%);
+                }
+            }
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    @include breakpoint(small) {
+        &--product-specs {
+            margin-top: 40px;
+        }
+    }
+}
+.tabs-content,
+.tabs-panel {
+    border: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 21px;
+    .more-link {
+        button {
+            color: $green;
+        }
+    }
+}
+
+ul.tab-picker--product-specs {
+    margin-top: 10px;
+}

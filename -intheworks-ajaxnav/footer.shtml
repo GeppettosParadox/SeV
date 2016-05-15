@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Landing Page | SCOTTeVEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://vjs.zencdn.net/5.9.2/video-js.css" rel="stylesheet">
+    <script>
+        document.createElement("picture");
+    </script>
+    <script src="vendor/picturefill/dist/picturefill.min.js" async></script>
+    <script type="text/javascript" data-main="scripts/vue.js" src="scripts/vue.js"></script>
+    <!-- TODO: Change to vue.min.js for production -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5ec26a">
+    <meta name="apple-mobile-web-app-title" content="SCOTTeVEST">
+    <meta name="application-name" content="SCOTTeVEST">
+    <meta name="msapplication-TileColor" content="#5ec26a">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#5ec26a">
+
+    <!-- Standard SEO -->
+</head>
+
+<body>
+        <footer class="site-footer">
+            <nav class="site-footer__shop-nav">
+                <ul>
+                    <li><a href="products_category.html">All Products</a></li>
+                    <li><a href="products_category.html">Men</a></li>
+                    <li><a href="products_category.html">Women</a></li>
+                    <li><a href="#">Daily Sale</a></li>
+                    <li><a href="#">Outlet</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__site-nav">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Join Our List</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">Corporate Gifts</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Request RMA</a></li>
+                </ul>
+            </nav>
+            <div class="site-footer__social-buttons">
+                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+            <div class="site-footer__logo">
+                <a href="#">
+                    <img src="images/logo-blue.svg" alt="SCOTTeVEST">
+                </a>
+            </div>
+            <div class="site-footer__copyright">
+                &copy;2016. SCOTTeVEST. All Rights Reserved.
+            </div>
+
+        </footer>
+
+
+    <script src="https://vjs.zencdn.net/5.9.2/video.js"></script>
+    <script type="text/javascript" data-main="scripts/jquery.js" src="vendor/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/jquery-ui/jquery-ui.min.js" src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/twentytwenty/jquery.event.move.js" src="vendor/twentytwenty/js/jquery.event.move.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/twentytwenty/jquery.twentytwenty.js" src="vendor/twentytwenty/js/jquery.twentytwenty.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/foundation.js" src="vendor/foundation-sites/dist/foundation.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/slick.js" src="vendor/slick-carousel/slick/slick.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/jquery.stick-kit.min.js" src="vendor/jquery.stick-kit.min.js"></script>
+    <script type="text/javascript" data-main="scripts/vendor/jquery-selectboxit/src/javascripts/jquery.selectBoxIt.min.js" src="vendor/jquery-selectboxit/src/javascripts/jquery.selectBoxIt.min.js"></script>
+    <script type="text/javascript" data-main="scripts/main.js" src="scripts/main.js"></script>
+</body>
+
+</html>

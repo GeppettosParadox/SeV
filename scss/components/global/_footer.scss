@@ -1,0 +1,96 @@
+.site-footer {
+    padding: 50px 0;
+    text-align: center;
+    background: #f4f4f4;
+    color: #7a7a7a;
+    a {
+        color: #7a7a7a;
+        &:hover {
+            color: #606c82;
+        }
+    }
+}
+
+.site-footer__shop-nav,
+.site-footer__site-nav {
+    ul {
+        list-style-type: none;
+        > li {
+            display: inline-block;
+        }
+    }
+}
+
+.site-footer__shop-nav,
+.site-footer__site-nav {
+    @include breakpoint(small only) {
+        ul {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            -webkit-column-gap: 1em;
+            column-gap: 1em;
+            -moz-column-gap: 1em;
+            li {
+                width: 100%;
+            }
+        }
+    }
+    @include breakpoint(medium only) {
+        ul {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 1em;
+            column-gap: 1em;
+            -moz-column-gap: 1em;
+            li {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.site-footer__shop-nav {
+    margin-bottom: 20px;
+    a {
+        font-size: 20px;
+        margin: 0 27px;
+    }
+}
+
+.site-footer__site-nav {
+    max-width: 900px;
+    margin: 0 auto;
+    a {
+        font-size: 16px;
+        line-height: 40px;
+        margin: 0 20px;
+    }
+}
+
+.site-footer__social-buttons {
+    margin-bottom: 30px;
+}
+
+.site-footer__logo {
+    margin-bottom: 30px;
+    img {
+
+    }
+}
+
+.site-footer__copyright {
+    font-size: 12px;
+}
+
+.site-footer__social-buttons {
+    a {
+    font-size: 30px;
+        color: #c3c3c3;
+    }
+    a + a {
+        margin-left: .67em;
+    }
+}

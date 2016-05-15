@@ -1,0 +1,46 @@
+.offer-bar {
+    background: $lime-green;
+    padding: 0;
+    min-height: 35px;
+    overflow: hidden;
+    a {text-decoration: underline;}
+    button {
+        float: right;
+        border: 0;
+        height: 35px;
+    }
+    a, button {
+        color: #000;
+    }
+    @include breakpoint(medium) {
+        height: 45px;
+        text-align: center;
+        a {margin-left: .8em;}
+        button {
+            float: none;
+            margin-left: 1.7em;
+            height: 45px;
+        }
+    }
+}
+
+.offer-bar__text,
+.offer-bar__link {
+    line-height: (36rem / 14);
+    @include breakpoint(medium) {
+        line-height: (45rem / 14);
+    }
+}
+
+.offer-bar__btn {
+    margin-bottom: 0;
+    background: rgba(0,0,0,.1);
+    &:hover {
+        background: rgba(0,0,0,.15);
+    }
+    .icon-arrow {
+        font-size: 5px;
+        position: relative;
+        bottom: 1px;
+    }
+}

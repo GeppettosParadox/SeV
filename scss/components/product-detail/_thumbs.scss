@@ -1,0 +1,21 @@
+.product-detail__thumbs {
+    img {
+        width: 100%;
+    }
+}
+
+.product-detail__thumbs {
+    img, video {
+        display: block;
+    }
+    @include breakpoint(medium) {
+        &__left {
+            width: 50%;
+            float: left;
+        }
+        &__right {
+            width: 50%;
+            float: right;
+        }
+    }
+}

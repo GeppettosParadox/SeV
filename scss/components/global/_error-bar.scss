@@ -1,0 +1,28 @@
+.error-bar {
+    display: block;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: $orange;
+    color: #fff;
+    padding: 40px 0;
+    z-index: 99999;
+    font-size: 14px;
+    .container {
+        margin: 0 auto;
+        max-width: 870px;
+        position: relative;
+        padding-right: 55px;
+    }
+    &__close-button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translate(0, -50%);
+    }
+}

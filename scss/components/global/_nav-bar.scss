@@ -1,0 +1,324 @@
+header {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-bar {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    margin-top: 0;
+    padding: 0.5em 0 0;
+    color: #fff;
+    ul {
+        background: transparent;
+    }
+    a {
+        color: #fff;
+    }
+    @include breakpoint(small only) {
+        margin-top: .5em;
+    }
+    @include breakpoint(medium) {
+        .columns {
+            position: relative;
+            top: 14px;
+        }
+    }
+}
+
+.launch-nav-btn {
+    height: 44px;
+    padding-left: 56px;
+    background: transparent url("../images/nav-icon.svg") no-repeat left center;
+    background-size: 40px 30px;
+    font-size: 14px;
+    line-height: 44px;
+    @include breakpoint(medium) {
+        height: 15px;
+        padding-left: 30px;
+        background-size: auto 15px;
+        line-height: 15px;
+    }
+}
+
+.centered-logo {
+    position: absolute;
+    text-align: center;
+    background: transparent url("../images/logo.svg") no-repeat left center;
+    text-indent: -9999px;
+    width: 129px;
+    height: 54px;
+    left: 50%;
+    transform: translate(-50%, 5px);
+    background-size: 129px auto;
+    @include breakpoint(medium) {
+        width: 183px;
+        height: 77px;
+        background-size: 183px auto;
+    }
+}
+
+.top-bar-left,
+.top-bar-right {
+    @include breakpoint(small only) {
+        width: 50%;
+    }
+}
+
+.top-bar-right {
+    li {
+        display: inline-block;
+    }
+    ul {
+        text-align: right;
+    }
+}
+
+.nav-bar__cart-btn {
+    width: 50px;
+    height: 44px;
+    background: transparent url("../images/cart-icon.svg") no-repeat center center;
+    background-size: auto 44px;
+    @include breakpoint(medium) {
+        width: 28px;
+        height: 25px;
+        background-size: auto 25px;
+    }
+}
+
+.nav-bar__close-cart-btn {
+    display: none;
+}
+
+.top-bar {
+    padding-top: 0 !important;
+}
+
+body.sticky-navbar {
+    padding-top: 86px;
+}
+
+.nav-bar {
+    &.sticky {
+        z-index: 10000;
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 86px;
+        width: 100%;
+    }
+
+    &.nav-bar--interior {
+        height: 86px;
+    }
+
+    &.nav-bar--interior,
+    &.sticky {
+        background: #fff;
+        color: #000;
+        box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.29);
+        a {
+            color: #000;
+        }
+        .launch-nav-btn {
+            background-image: url("../images/nav-icon-black.svg");
+        }
+        .centered-logo {
+            background-image: url("../images/logo-black.svg");
+        }
+        .nav-bar__cart-btn {
+            background-image: url("../images/cart-icon-black.svg");
+        }
+        .launch-nav-btn {
+            height: 44px;
+            padding-left: 30px;
+        }
+        .centered-logo {
+            width: 110px;
+            height: 46px;
+            background-size: 110px auto;
+            top: 0;
+        }
+
+        @include breakpoint(medium) {
+            .top-bar-left {
+                position: relative;
+                top: 7px;
+            }
+            .top-bar-right {
+                position: relative;
+                top: 13px;
+            }
+        }
+
+        @include breakpoint(small only) {
+            .columns {
+                padding-top: 1.1em;
+            }
+            .centered-logo {
+                top: 10px;
+            }
+        }
+    }
+
+    .icon-telephone {
+        color: $green;
+        vertical-align: middle;
+        margin-right: .3em;
+    }
+    .menu > li > a {
+        padding-left: .3em;
+        padding-right: .3em;
+        @include breakpoint(large) {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+}
+
+@include breakpoint(medium) {
+    .nav-bar.sticky {
+        .cart-button-wrap {
+            margin-left: 2em;
+        }
+    }
+    .nav-bar:not(.sticky):not(.nav-bar--interior) {
+        ul.menu {
+            margin-right: 92px;
+        }
+        .cart-button-wrap {
+            margin-left: 2em;
+            display: inline-block;
+            width: 92px;
+            height: 92px;
+            position: absolute;
+            top: -14px;
+            right: 0;
+            button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:hover {
+                background-color: $green;
+            }
+        }
+    }
+    .nav-bar.sticky,
+    .sticky-navbar {
+        .top-bar-right {
+            right: 86px;
+        }
+        .cart-button-wrap {
+            width: 86px;
+            height: 86px;
+            position: absolute;
+            top: -27px;
+            right: -101px;
+            .nav-bar__cart-btn {
+                width: 86px;
+                height: 86px;
+                &:hover {
+                    color: #fff;
+                    background: $green url("../images/cart-icon.svg") no-repeat center center;
+                    background-size: auto 25px;
+                }
+            }
+            &.active {
+                background-color: #f6f5f5;
+                .nav-bar__cart-btn {
+                    display: none;
+                }
+                .nav-bar__close-cart-btn {
+                    display: block;
+                    width: 86px;
+                    height: 86px;
+                    background: transparent url("../images/close-cart.svg") no-repeat center center;
+                    background-size: 24px 24px;
+                }
+                &:hover {
+                    background-color: $green;
+                    .nav-bar__close-cart-btn {
+                        background: transparent url("../images/close-cart-hover.svg") no-repeat center center;
+                        background-size: 24px 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-num {
+        bottom: 4px;
+    }
+}
+
+@include breakpoint(small only) {
+    .nav-bar.sticky,
+    .sticky-navbar {
+        .cart-button-wrap {
+            &.active {
+                position: relative;
+                top: -15px;
+                right: -10px;
+                background-color: #f6f5f5;
+                .nav-bar__cart-btn {
+                    display: none;
+                }
+                .nav-bar__close-cart-btn {
+                    display: block;
+                    width: 86px;
+                    height: 86px;
+                    background: transparent url("../images/close-cart.svg") no-repeat center center;
+                    background-size: 24px 24px;
+                }
+                &:hover {
+                    background-color: $green;
+                    .nav-bar__close-cart-btn {
+                        background: transparent url("../images/close-cart-hover.svg") no-repeat center center;
+                        background-size: 24px 24px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.cart-num {
+    position: relative;
+    @include breakpoint(small only) {
+        bottom: 10px;
+        left: -3px;
+        font-size: 20px;
+    }
+}
+
+.nav-bar:not(.sticky):not(.nav-bar--interior) li.show-for-medium {
+    position: relative;
+    top: 14px;
+}
+
+@media(max-width: 844px) {
+    div.top-bar-right > ul .show-for-medium {
+        opacity: 0;
+    }
+}
+
+.top-bar .show-for-medium {
+    transition: color .2s ease-in-out;
+    &:hover {
+        color: $green;
+    }
+    a {
+        transition: color .2s ease-in-out;
+    }
+    a:hover {
+        color: $green;
+    }
+}

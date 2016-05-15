@@ -1,0 +1,48 @@
+.category {
+    position: relative;
+    z-index: 10;
+    margin: 0 0 100px 0;
+}
+
+.category__product {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    &:hover {
+        color: #000;
+    }
+    position: relative;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    .product-grid__details,
+    .product-grid__quick-view-btn {
+        top: 0 !important;
+    }
+}
+
+.category__product-row {
+    margin-top: 2em;
+}
+
+.categories-nav {
+    margin-top: 25px;
+    padding-bottom: 0 !important;
+    .button-group {
+        text-align: left !important;
+    }
+    button {
+        font-size: 28px;
+        font-weight: bold;
+        padding-bottom: 0 !important;
+    }
+    @include breakpoint(medium only) {
+        button {
+            font-size: 22px;
+        }
+    }
+    @include breakpoint(small only) {
+        button {
+            font-size: 18px;
+        }
+    }
+}

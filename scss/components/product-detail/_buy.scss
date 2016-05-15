@@ -1,0 +1,218 @@
+.product-detail__top {
+    background: #f2f2f2;
+    position: relative;
+    margin-bottom: 2em;
+    > .bottom-angle {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: scale(-1.05, 1.05);
+        img {
+            display: block;
+        }
+        @include breakpoint(large) {
+            display: block;
+        }
+
+    }
+}
+
+.product-detail__bg {
+    position: relative;
+    .bottom-angle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: scale(-1.05, 1.05);
+        img {
+            display: block;
+        }
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+    img {
+        transition: opacity .5s ease-in-out;
+    }
+    body.sticky-navbar & {
+        img {
+            @include breakpoint(large) {
+                //opacity: .5;
+            }
+        }
+    }
+}
+
+.product-detail__top-buy {
+    background: #fff;
+    padding-top: 2em;
+    @include breakpoint(large) {
+        background: #f2f2f2;
+    }
+    h1 {
+        font-size: 2.142857143rem;
+        margin-top: 1em;
+        font-weight: 700;
+    }
+    h2 {
+        font-size: 2.571428571rem;
+    }
+    .size-options,
+    .size-chart-link {
+        margin-top: 1em;
+    }
+}
+
+.icon-star {
+    font-size: 15px;
+    color: #d0d0d0;
+    &--fill {
+        color: #eeb111;
+    }
+}
+
+.size-options {
+    button {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        border: 1px solid #e6e6e6;
+        &.active {
+            border-color: #000;
+        }
+        &:focus {
+            outline: 0;
+        }
+        &[disabled] {
+            background: #e6e6e6;
+            color: rgba(0,0,0,.3);
+        }
+        + button {
+            margin-left: .5em;
+        }
+        @include breakpoint(small only) {
+            width: 28px;
+            height: 28px;
+            font-size: 16px;
+        }
+    }
+}
+
+.size-chart-link {
+    height: 36px;
+    line-height: 36px;
+    color: $green;
+    img {
+        margin: -2px 6px 0 0;
+    }
+    &:hover {
+        color: $green;
+    }
+}
+
+.color-options {
+    margin-top: 8px;
+    button {
+        box-sizing: content-box;
+        width: 21px;
+        height: 21px;
+        border-radius: 21px;
+        border: 1px solid rgba(242, 242, 242, 0);
+        &:focus {
+            outline: 0;
+        }
+        &.active {
+            border: 1px solid #000;
+        }
+        + button {
+            margin-left: 8px;
+        }
+    }
+}
+
+.color-qty {
+    margin-top: 1em;
+    padding: 22px 0 4px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.qty-options {
+    button, input {
+        display: inline;
+        font-size: 24px;
+    }
+    button {
+    }
+    input {
+        width: 66px;
+        border: 0;
+        box-shadow: none;
+        text-align: center;
+        font-size: 700;
+        background: #f2f2f2;
+    }
+}
+
+.scroll-back-btn {
+    margin-top: 2em;
+    button {
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+        display: block;
+        width: 100%;
+        padding-top: 1.2em;
+        padding-bottom: 1.2em;
+        font-size: 18px;
+        .icon-arrow {
+            transform: rotate(-90deg) !important;
+            position: relative;
+            top: -5px;
+        }
+    }
+    @include breakpoint(medium down) {
+        display: none;
+    }
+}
+
+
+.buy-bar {
+    margin-top: 2em;
+    button,
+    a {
+        font-size: 18px;
+    }
+    .buy-btn {
+        display: block;
+        button {
+            width: 100%;
+            padding-top: 1.2em;
+            padding-bottom: 1.2em;
+        }
+    }
+    .add-wishlist,
+    .share {
+        height: 46px;
+        line-height: 46px;
+        a {
+            color: $green;
+        }
+    }
+    .add-wishlist {
+        border-right: 1px solid #e6e6e6;
+    }
+    @include breakpoint(medium) {
+        .buy-btn {
+            margin-bottom: 20px;
+        }
+        .link,
+        .columns {
+            height: 63px;
+            line-height: 63px;
+        }
+    }
+}
