@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="chat.svg" class="cls-1" d="M1170,829h18a2,2,0,0,1,2,2v11a2,2,0,0,1-2,2h-18a2,2,0,0,1-2-2V831A2,2,0,0,1,1170,829Zm1,1h16a2,2,0,0,1,2,2v9a2,2,0,0,1-2,2h-16a2,2,0,0,1-2-2v-9A2,2,0,0,1,1171,830Zm1,20v-6h6Zm1-3v-4h4Z" transform="translate(-1168 -829)"/>
+</svg>

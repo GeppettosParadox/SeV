@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="12" viewBox="0 0 38 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5ec26a;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="sizing-chart.svg" class="cls-1" d="M1171,362h38v12h-38V362Zm1,1h36v10h-36V363Zm5,6h1v4h-1v-4Zm3-3h1v7h-1v-7Zm3,3h1v4h-1v-4Zm3-3h1v7h-1v-7Zm3,3h1v4h-1v-4Zm3-3h1v7h-1v-7Zm3,3h1v4h-1v-4Zm3-3h1v7h-1v-7Zm3,3h1v4h-1v-4Zm3-3h1v7h-1v-7Zm-29.5-2a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,1174.5,364Zm0,1a0.5,0.5,0,1,1-.5.5A0.5,0.5,0,0,1,1174.5,365Z" transform="translate(-1171 -362)"/>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="25px" viewBox="0 0 16 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" fill="#5EC26A">
+            <path d="M15.4882324,12.5 L15.5688715,12.4194847 L12.5998699,9.43887031 L12.5111316,9.52747234 L2.96900161,0 L0,2.98061439 L9.53403081,12.5 L4.40536496e-13,22.0193856 L2.96900161,25 L12.5111316,15.4725277 L12.5998699,15.5611297 L15.5688715,12.5805153 L15.4882324,12.5 Z" id="arrow-right.svg"></path>
+        </g>
+    </g>
+</svg>
